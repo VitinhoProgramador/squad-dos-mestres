@@ -12,7 +12,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Certifique-se de que o carrossel ocupe a altura total da tela */
   overflow: hidden;
 }
 
@@ -21,7 +21,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Certifique-se de que a imagem ocupa toda a altura do carrossel */
   background-size: cover; /* Cobre o contêiner */
   background-position: center; /* Centraliza a imagem */
   opacity: 0;
@@ -33,9 +33,9 @@ html {
 }
 
 .squad {
-  position: relative; /* Para que a lista fique acima do carrossel */
-  z-index: 1; /* Para que a navegação fique acima do carrossel */
-  padding: 10px; /* Padding para evitar que o texto grude nas bordas */
+  position: relative;
+  z-index: 1;
+  padding: 10px;
 }
 
 .squad ul {
@@ -43,22 +43,22 @@ html {
   justify-content: center;
   align-items: baseline;
   list-style: none;
-  padding: 0; /* Remove padding da lista */
-  margin: 20px 0; /* Margem vertical */
+  padding: 0;
+  margin: 20px 0;
 }
 
 .squad li {
-  margin: 0 10px; /* Margem lateral reduzida */
-  color: white; /* Cor do texto */
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
-  padding: 10px 15px; /* Espaçamento interno */
-  border-radius: 5px; /* Bordas arredondadas */
-  transition: background-color 0.3s ease; /* Transição suave */
+  margin: 0 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .squad li:hover {
-  background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo ao passar o mouse */
-  color: black; /* Cor do texto ao passar o mouse */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
 }
 
 .squad a {
@@ -66,55 +66,53 @@ html {
 }
 
 .squad a:hover {
-  color: black; /* Cor do texto ao passar o mouse */
+  color: black;
 }
 
 main {
   position: relative;
   z-index: 1;
   color: white;
-  text-align: center; /* Centraliza o texto */
+  text-align: center;
   padding: 20px;
-  display: flex; /* Adicionando flexbox para melhor controle */
-  flex-direction: column; /* Permite empilhar itens */
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
-  height: 100vh; /* Ocupa a altura total da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Media Queries para melhorar a responsividade */
 @media (max-width: 768px) {
   .squad ul {
-    flex-direction: column; /* Muda para coluna em telas menores */
-    align-items: center; /* Centraliza os itens */
+    flex-direction: column;
+    align-items: center;
   }
 
   .squad li {
-    margin: 10px 0; /* Espaço vertical entre os itens */
+    margin: 10px 0;
   }
 }
 
 @media (max-width: 480px) {
   main {
-    padding: 10px; /* Reduz padding em telas muito pequenas */
+    padding: 10px;
   }
 
   .squad li {
-    font-size: 14px; /* Reduz o tamanho da fonte */
-    padding: 8px 10px; /* Reduz o padding */
+    font-size: 14px;
+    padding: 8px 10px;
   }
 
   .carrosel {
-    height: 50vh; /* Ajusta a altura do carrossel em dispositivos móveis */
+    height: 100vh; /* Mantenha a altura total em dispositivos móveis */
   }
 
   .imagem {
     height: 100%; /* Mantém as imagens ocupando toda a altura do carrossel */
   }
 
-  /* Centralizando informações */
   .info {
     text-align: center;
-    margin: 20px 0; /* Margem vertical para as informações */
+    margin: 20px 0;
   }
 }
