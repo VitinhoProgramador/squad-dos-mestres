@@ -32,35 +32,38 @@ html {
   opacity: 1; /* Mostra a imagem ativa */
 }
 
+.squad {
+  position: relative; /* Para que a lista fique acima do carrossel */
+  z-index: 1; /* Para que a navegação fique acima do carrossel */
+}
+
 .squad ul {
   display: flex;
   justify-content: center;
   align-items: baseline;
-  height: 100vh;
   list-style: none;
+  padding: 0; /* Remove padding da lista */
+  margin: 20px 0; /* Margem vertical */
 }
 
 .squad li {
-  margin: 0 40px;
+  margin: 0 10px; /* Margem lateral reduzida */
   color: white; /* Cor do texto */
   background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
-  padding: 10px 20px; /* Espaçamento interno */
+  padding: 10px 15px; /* Espaçamento interno */
   border-radius: 5px; /* Bordas arredondadas */
   transition: background-color 0.3s ease; /* Transição suave */
 }
 
 .squad li:hover {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Cor de fundo ao passar o mouse */
+  background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo ao passar o mouse */
   color: black; /* Cor do texto ao passar o mouse */
 }
+
 .squad a {
   text-decoration: none;
 }
+
 .squad a:hover {
   color: black; /* Cor do texto ao passar o mouse */
 }
@@ -73,27 +76,25 @@ main {
   padding: 20px;
 }
 
-.infojoão {
-  text-align: center;
-  margin-top: 50px;
+/* Media Queries para melhorar a responsividade */
+@media (max-width: 768px) {
+  .squad ul {
+    flex-direction: column; /* Muda para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+  }
+  
+  .squad li {
+    margin: 10px 0; /* Espaço vertical entre os itens */
+  }
 }
-.infogapara {
-  text-align: center;
-  margin-top: 50px;
-}
-.infoisac {
-  text-align: center;
-  margin-top: 50px;
-}
-.infomaria {
-  text-align: center;
-  margin-top: 50px;
-}
-.infomatheus {
-  text-align: center;
-  margin-top: 50px;
-}
-.infovitor {
-  text-align: center;
-  margin-top: 50px;
+
+@media (max-width: 480px) {
+  main {
+    padding: 10px; /* Reduz padding em telas muito pequenas */
+  }
+
+  .squad li {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    padding: 8px 10px; /* Reduz o padding */
+  }
 }
