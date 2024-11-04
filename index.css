@@ -35,6 +35,7 @@ html {
 .squad {
   position: relative; /* Para que a lista fique acima do carrossel */
   z-index: 1; /* Para que a navegação fique acima do carrossel */
+  padding: 10px; /* Padding para evitar que o texto grude nas bordas */
 }
 
 .squad ul {
@@ -96,5 +97,13 @@ main {
   .squad li {
     font-size: 14px; /* Reduz o tamanho da fonte */
     padding: 8px 10px; /* Reduz o padding */
+  }
+
+  .carrosel {
+    height: 50vh; /* Ajusta a altura do carrossel em dispositivos móveis */
+  }
+
+  .imagem {
+    height: 100%; /* Mantém as imagens ocupando toda a altura do carrossel */
   }
 }
