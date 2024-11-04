@@ -22,8 +22,8 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Cobre o contêiner */
+  background-position: center; /* Centraliza a imagem */
   opacity: 0;
   transition: opacity 1s ease-in-out; /* Transição suave */
 }
@@ -105,5 +105,11 @@ main {
 
   .imagem {
     height: 100%; /* Mantém as imagens ocupando toda a altura do carrossel */
+  }
+
+  /* Centralizando informações */
+  .info {
+    text-align: center;
+    margin: 20px 0; /* Margem vertical para as informações */
   }
 }
