@@ -73,8 +73,13 @@ main {
   position: relative;
   z-index: 1;
   color: white;
-  text-align: center;
+  text-align: center; /* Centraliza o texto */
   padding: 20px;
+  display: flex; /* Adicionando flexbox para melhor controle */
+  flex-direction: column; /* Permite empilhar itens */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  height: 100vh; /* Ocupa a altura total da tela */
 }
 
 /* Media Queries para melhorar a responsividade */
@@ -83,7 +88,7 @@ main {
     flex-direction: column; /* Muda para coluna em telas menores */
     align-items: center; /* Centraliza os itens */
   }
-  
+
   .squad li {
     margin: 10px 0; /* Espaço vertical entre os itens */
   }
